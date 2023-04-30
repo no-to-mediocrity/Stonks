@@ -1,0 +1,75 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.stonks.model.Model" />
+
+        <variable
+            name="flavorFragment"
+            type="com.example.stonks.PinInputFragment" />
+    </data>
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter your PIN"
+        android:textSize="24sp"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <EditText
+            android:id="@+id/pin_digit_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberPassword"
+            android:maxLength="1"
+            android:textSize="24sp"
+            android:width="80dp"
+            android:layout_marginEnd="16dp"/>
+
+        <EditText
+            android:id="@+id/pin_digit_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberPassword"
+            android:maxLength="1"
+            android:textSize="24sp"
+            android:width="80dp"
+            android:layout_marginEnd="16dp"/>
+
+        <EditText
+            android:id="@+id/pin_digit_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberPassword"
+            android:maxLength="1"
+            android:textSize="24sp"
+            android:width="80dp"
+            android:layout_marginEnd="16dp"/>
+
+        <EditText
+            android:id="@+id/pin_digit_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberPassword"
+            android:maxLength="1"
+            android:textSize="24sp"
+            android:width="80dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+</layout>
