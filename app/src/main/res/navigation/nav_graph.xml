@@ -25,7 +25,9 @@
         tools:layout="@layout/portfolio_view">
         <action
             android:id="@+id/action_portfolioFragment_to_stockViewFragment"
-            app:destination="@id/stonkViewFragment" />
+            app:destination="@id/stonkViewFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
     </fragment>
     <fragment
         android:id="@+id/stonkViewFragment"
@@ -36,6 +38,8 @@
             android:id="@+id/action_stonkViewFragment_to_assetActionFragment"
             app:destination="@id/assetActionFragment"
             app:popUpTo="@id/assetActionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
@@ -44,12 +48,11 @@
         android:label="@string/asset_action"
         tools:layout="@layout/asset_action">
         <action
-            android:id="@+id/action_pickupFragment_to_summaryFragment"
-            app:destination="@id/portfolioFragment" />
-        <action
-            android:id="@+id/action_pickupFragment_to_startFragment"
+            android:id="@+id/action_assetActionFragment_to_PortfolioFragment"
             app:destination="@id/portfolioFragment"
             app:popUpTo="@id/portfolioFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
             app:popUpToInclusive="true" />
     </fragment>
 </navigation>

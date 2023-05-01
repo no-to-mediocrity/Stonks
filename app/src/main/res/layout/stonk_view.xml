@@ -75,17 +75,18 @@
 
         <Button
             android:id="@+id/buy_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
             android:text="Buy"
             android:textSize="16sp"
-            app:backgroundTint="@color/teal_700" />
+            app:backgroundTint="@color/teal_700"
+            android:onClick="@{() -> stonkViewFragment.buyStock()}"
+            />
 
         <Button
-
             android:id="@+id/sell_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
             android:layout_marginStart="48dp"
             android:text="Sell"
             android:textSize="16sp"

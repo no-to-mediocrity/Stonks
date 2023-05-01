@@ -22,6 +22,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.example.stonks.adapter.DataDemo
 import com.example.stonks.adapter.ItemAdapter
 import com.example.stonks.databinding.PortfolioViewBinding
@@ -54,7 +55,11 @@ class PortfolioFragment : Fragment() {
         walletdemo.set()
         val recyclerView = binding?.recycleView
         if (recyclerView != null) {
-            recyclerView.adapter = ItemAdapter(this@PortfolioFragment, walletdemo.demowallet)
+            recyclerView.adapter = binding?.let {
+                ItemAdapter(this@PortfolioFragment, walletdemo.demowallet, findNavController(),
+                    it
+                )
+            }
         }
     }
 
