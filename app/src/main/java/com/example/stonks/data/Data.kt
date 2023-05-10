@@ -1,4 +1,4 @@
 package com.example.stonks.data
 
-class Data {
+data class Data (val test: String) {
 }

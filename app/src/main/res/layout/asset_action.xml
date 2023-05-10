@@ -16,14 +16,40 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- Current price of the stock -->
     <TextView
-        android:id="@+id/current_price_textview"
+        android:id="@+id/current_action"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
         android:paddingTop="50dp"
-        android:text="Current price: $50.00"
+        android:text="Current action"
+        android:textSize="24sp" />
+    <!-- Current price of the stock -->
+    <TextView
+        android:id="@+id/available_funds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Available funds: $0.00"
+        android:textSize="24sp" />
+    <TextView
+        android:id="@+id/current_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Current price: $0.00"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/purchase_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Purchase price: $0.00"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/selling_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selling price: $0.00"
+        android:layout_marginBottom="16dp"
         android:textSize="24sp" />
 
     <!-- Input field with plus and minus buttons -->
@@ -39,10 +65,11 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:text="-"
-            android:textSize="24sp" />
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/quantity_edittext"
+            android:text="0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:width="120dp"
@@ -56,19 +83,28 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:text="+"
-            android:textSize="24sp" />
+            android:textSize="16sp" />
 
     </LinearLayout>
 
     <!-- Buy/sell button -->
+
     <Button
         android:id="@+id/buy_sell_button"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Action"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/warning_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="16dp"
-        android:text="Action"
-        android:textSize="24sp" />
+        android:textColor="@color/dark_red"
+        android:text=""
+        android:textSize="16sp" />
 
 </LinearLayout>
     </layout>

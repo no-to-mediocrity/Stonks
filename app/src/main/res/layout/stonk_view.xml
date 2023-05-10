@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
+
     <data>
         <variable
             name="viewModel"
@@ -9,61 +10,69 @@
             name="stonkViewFragment"
             type="com.example.stonks.StonkViewFragment" />
     </data>
-
     <LinearLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    app:layoutDescription="@xml/stonk_view_scene">
+    app:layoutDescription="@xml/stonk_view_scene"
+       >
 
+        <!--  <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:paddingStart="16dp"
+              android:paddingEnd="16dp"
+              android:paddingTop="16dp"
+              android:paddingBottom="16dp"
+              android:orientation="horizontal">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"
-        android:orientation="horizontal">
+          <ImageView
+              android:id="@+id/imageView"
+              android:layout_width="60dp"
+              android:layout_height="60dp"
+              app:srcCompat="@drawable/ic_launcher_background"
+              android:contentDescription="Company logo" />
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+              <TextView
+                  android:id="@+id/stonk_name"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="20dp"
+                   android:text="Name"
+                  android:textAlignment="textStart"
+                  android:textSize="24sp" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        app:srcCompat="@drawable/ic_launcher_background"
-        android:contentDescription="Company logo" />
-        <LinearLayout
+              <TextView
+                  android:id="@+id/stonk_price"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Price"
+                  android:layout_marginStart="20dp"
+                  android:textAlignment="textStart"
+                  android:textSize="24sp" />
+                  </LinearLayout>
+              </LinearLayout>
+
+           <com.github.mikephil.charting.charts.LineChart
+              android:paddingStart="8dp"
+              android:paddingEnd="8dp"
+              android:id="@+id/line_chart"
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_weight="0.2" /> -->
+
+        <WebView
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:id="@+id/webView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-        <TextView
-            android:id="@+id/stonk_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-             android:text="Name"
-            android:textAlignment="textStart"
-            android:textSize="24sp" />
+            android:layout_height="0dp"
+            android:layout_weight="0.2"/>
 
-        <TextView
-            android:id="@+id/stonk_price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Price"
-            android:layout_marginStart="20dp"
-            android:textAlignment="textStart"
-            android:textSize="24sp" />
-            </LinearLayout>
-        </LinearLayout>
-
-    <com.github.mikephil.charting.charts.LineChart
-        android:paddingStart="8dp"
-        android:paddingEnd="8dp"
-        android:id="@+id/line_chart"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.2" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -77,10 +86,9 @@
             android:id="@+id/buy_button"
             android:layout_width="120dp"
             android:layout_height="50dp"
-            android:text="Buy"
+            android:text="@string/asset_action_buy"
             android:textSize="16sp"
             app:backgroundTint="@color/teal_700"
-            android:onClick="@{() -> stonkViewFragment.buyStock()}"
             />
 
         <Button
@@ -88,7 +96,7 @@
             android:layout_width="120dp"
             android:layout_height="50dp"
             android:layout_marginStart="48dp"
-            android:text="Sell"
+            android:text="@string/asset_action_sell"
             android:textSize="16sp"
             app:backgroundTint="@color/dark_red" />
     </LinearLayout>

@@ -8,10 +8,13 @@ class DataDemo {
 
     fun set() {
         demowallet.deposit(10000.0)
-        demowallet.purchaseStock("AAPL", 10.0, 2)
-        demowallet.purchaseStock("TSLA", 20.0, 2)
-        demowallet.purchaseStock("NFLX", 15.0, 2)
-        demowallet.purchaseStock("GOOGL", 12.0, 2)
+        demowallet.purchaseStock("USD", 0.0, 0,"","")
+        demowallet.purchaseStock("AAPL", 100.0, 2, "US0378331005", "Apple")
+        demowallet.purchaseStock("TSLA", 400.0, 3,"US88160R1014","Tesla Motors")
+        demowallet.purchaseStock("NFLX", 150.0, 4,"US64110L1061", "Netflix")
+        demowallet.purchaseStock("GOOGL", 120.0, 2,"US02079K3059", "Alphabet Class A")
+        demowallet.purchaseStock("DIS", 100.0, 3,"US2546871060", "Walt Disney")
+        demowallet.purchaseStock("MCD", 102.0, 2,"US5801351017", "McDonald's")
     }
 
     fun size() :Int {
