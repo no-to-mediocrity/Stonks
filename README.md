@@ -40,6 +40,11 @@ Stonks takes advantage of the MVVM architecture in targeted segments, revolution
 ### RoomDB for storage
 Stonks integrates Room Database to store vital data subsets. This seamless adoption streamlines local storage with efficient SQLite support, enhancing data consistency and security. The result is a reliable and responsive user experience.
 
-License
+## Release 
+
+Try the beta!
+[Stonks.apk](https://github.com/no-to-mediocrity/Stonks/blob/master/release/stonks_beta.apk)
+
+## License
 This project is licensed under the MIT License
 
