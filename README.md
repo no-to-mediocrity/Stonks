@@ -8,6 +8,13 @@
 
 Stonks is a state-of-the-art paper trading application designed to provide aspiring investors a risk-free platform to practice their trading strategies. Whether you're new to the stock market or a seasoned trader looking to test a new system, Stonks offers you a sandbox to experiment without losing real money. Featuring real-time stock market data and an intuitive user interface, the app equips you with the tools you need to hone your investing skills.
 
+<div align="center">
+
+<p><img src="https://github.com/no-to-mediocrity/Stonks/blob/master/blob/Screenshot_20230824_235612.png" width="300">
+<img src="https://github.com/no-to-mediocrity/Stonks/blob/master/blob/Screenshot_20230824_235640.png" width="300"></p>
+
+ </div>
+
 ## Getting Started
 
 ### Prerequisites
