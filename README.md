@@ -43,6 +43,7 @@ Stonks integrates Room Database to store vital data subsets. This seamless adopt
 ## Release 
 
 Try the beta!
+
 [Stonks.apk](https://github.com/no-to-mediocrity/Stonks/blob/master/release/stonks_beta.apk)
 
 ## License
