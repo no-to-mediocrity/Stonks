@@ -8,7 +8,7 @@
 
         <variable
             name="stonkViewFragment"
-            type="com.example.stonks.StonkViewFragment" />
+            type="com.example.stonks.fragments.StonkViewFragment" />
     </data>
     <LinearLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"

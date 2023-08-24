@@ -8,8 +8,9 @@ import android.widget.TextView
 import androidx.navigation.NavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.stonks.R
-import com.example.stonks.ShopFragment
+import com.example.stonks.fragments.ShopFragment
 import com.example.stonks.model.Model
+import com.example.stonks.model.Asset
 import com.squareup.picasso.Picasso
 import jp.wasabeef.picasso.transformations.CropCircleTransformation
 
@@ -31,7 +32,7 @@ class ShopItemAdapter(
         init {
             itemView.setOnClickListener {
                var stock = assets[adapterPosition]
-                model.selectStock(stock.ticker,stock.isin,stock.name)
+                model.selectAsset(Asset(stock.ticker, stock.isin,stock.name,0.0,0.0 ))
                 navController.navigate(R.id.action_ShopFragment_to_stockViewFragment)
             }
         }
@@ -45,12 +46,7 @@ class ShopItemAdapter(
     }
 
     override fun onBindViewHolder(holder: ShopItemViewHolder, position: Int) {
-  //    if (model.shop[position].name != "") {
             holder.titleView.text = model.shop[position].name
-      //  } else {
-        //    holder.titleView.text = model.shop[position].ticker
-       // }
-        //if (model.shop[position].ticker != "USD") {
             if (model.shop[position].image != "") {
                 Picasso.get()
                     .load(model.shop[position].image)
@@ -58,7 +54,6 @@ class ShopItemAdapter(
                     .transform(CropCircleTransformation())
                     .into(holder.imageView)
             }
-        //}
     }
 
     override fun getItemCount() = model.shop.size

@@ -1,4 +1,4 @@
-package com.example.stonks
+package com.example.stonks.fragments
 
 import android.annotation.SuppressLint
 import android.os.Bundle

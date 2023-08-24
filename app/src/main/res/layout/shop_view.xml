@@ -7,7 +7,7 @@
 
         <variable
             name="shopFragment"
-            type="com.example.stonks.ShopFragment" />
+            type="com.example.stonks.fragments.ShopFragment" />
     </data>
 
     <FrameLayout
@@ -27,7 +27,7 @@
             android:paddingLeft="8dp">
 
             <TextView
-                android:textSize="18dp"
+                android:textSize="18sp"
                 android:id="@+id/available_stocks_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

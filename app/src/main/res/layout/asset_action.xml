@@ -6,7 +6,7 @@
 
         <variable
             name="assetActionFragment"
-            type="com.example.stonks.AssetActionFragment" />
+            type="com.example.stonks.fragments.AssetActionFragment" />
     </data>
 
 <LinearLayout
