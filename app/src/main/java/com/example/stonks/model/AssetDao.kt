@@ -134,10 +134,12 @@ interface AssetDao {
         }
         asset.qty -= qty
         depositMoney(qty * price)
-        insert(asset)
-
+        if (asset.qty == 0.0) {
+            delete(asset)
+        } else {
+            insert(asset)
+        }
     }
-
 }
 
 
